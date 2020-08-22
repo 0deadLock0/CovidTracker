@@ -1,0 +1,59 @@
+DOCUMENTATION::
+**************************************************************BRIEF**************************************************************************
+Author: Abhimanyu Gupta (2019226) (abhimanyu19226@iiitd.ac.in)
+Functionality:
+	A GUI application to track cases of COVID in different sections of society.
+For Purpose: Final Assignment in Refresher Module, CSE201-Advanced Programming at IIIT-Delhi
+Includes:	CovidTracker.java - runs the GUI application
+	CovidTracker.class - contains method to build the GUI application
+	Patient.class - stores the information about a patient
+	records.txt - contains the information of people residing in society
+**********************************************************************************************************************************************
+
+******************************************************RULES AND REGULATION*************************************************************
+INSTRUCTION FORMAT:
+Enter the date for which records are needed using the combo boxes.
+Select the towers of society, for which records are needed using check boxes.
+
+GUIDLINES FOR FILE CONTANING SOCIETY PEOPLE INFORMATION:
+*File should be a named "records.txt" extension.
+*File name is Case-Insensitive.
+*File name can contain any number of  words with any kind of character.
+*File should be encoded in ANSI encoding.
+*File should be present in the same folder in which program is run.
+*Each file line should contain only one person information in the format "Name Age Tower ReportingDate".
+**********************************************************************************************************************************************
+
+**********************************************************PROGRAM FLOW******************************************************************
+FLOW:
+*"records.txt" file is read and it content(information of Patient) is stored in Map of ArrayList using the Patient class.
+*CovidTracker class inherit JFrame(extends) and ActionListener(implements) class to ease things for building GUI 
+*CovidTracker class Constructor method is invoked to setup the GUI of application.
+*actionPerformed method is automatically called to process all inputs and further calls display_selected to show the desired results.
+
+ASSUMTIONS:
+*Patient got recovered on excatly 22th day after being reported with Covid. 
+**********************************************************************************************************************************************
+
+***************************************************ERROR HANDLING AND EASE OF RUNNING******************************************************************
+*ComboBoxes are used to ease entering of date from the user.
+*Incase of an invalid dates like 31 Apr 2020, date got set to a closest valid date 30 Apr 2020, and user is again prompted to submit.
+*When nothing is selected no action will be taken.
+*Incase user changes the input fileds from valid to invalid, output screen gets reset.
+*User can access as many different records as they want by adjusting the date and tower fields, untill they are correct.
+**********************************************************************************************************************************************
+
+***************************************************INSTRUCTIONS TO RUN******************************************************************
+Language and Version Support:
+*JAVA 13 support  needed to run the program.
+
+Method 1: Using command prompt or terminal
+	*Run the cmd inside the CovidTracker folder
+	*Enter "javac CovidTracker.java & java CovidTracker" (without quotes)
+	*The GUI application will be launched.
+Method 2:	Using IDE
+	*Check if JAVA 13 is supported or not.
+	*Complie and Run the "CovidTracker.java"
+	*The GUI application will be launched.
+**********************************************************************************************************************************************
+
